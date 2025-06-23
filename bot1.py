@@ -73,7 +73,7 @@ async def send_reminder(context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=user_id, text=f"🔔 Напоминание: {text}")
 
 if __name__ == '__main__':
-    application = ApplicationBuilder().token('7788340176:AAFVXf3cmo4zaQwD1E0jySiplQIj1hP58ec').build()
+    application = ApplicationBuilder().token('your-token').build()
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("remind", set_reminder))
     application.run_polling()
